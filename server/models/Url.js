@@ -1,3 +1,4 @@
+// /server/models/Url.js
 const { DataTypes } = require('sequelize');
 const sequelize = require('../database');
 
@@ -14,10 +15,14 @@ const Url = sequelize.define('Url', {
   shortCode: {
     type: DataTypes.STRING,
     allowNull: false,
-    unique: true,
+    // --- This is the corrected part ---
+    unique: {
+      name: 'unique_short_code_constraint',
+      msg: 'The provided short code is already in use.',
+    }
   },
 }, {
-  timestamps: true,
+  timestamps: true, // Adds createdAt and updatedAt columns
 });
 
 module.exports = Url;
