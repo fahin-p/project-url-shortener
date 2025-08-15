@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './App.css';
 
-const API_BASE_URL = 'http://localhost:3001';
+//const API_BASE_URL = 'http://localhost:3001';
+// This line should be used to make the deployed client work at vercel.Else to run locally the above line should be used and this should be commented out
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
 
 function App() {
   const [longUrl, setLongUrl] = useState('');
