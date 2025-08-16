@@ -8,7 +8,7 @@ A full-stack URL shortening service built with React, Node.js, and Azure SQL, de
 
 *(Note: The first request may be slow as the free-tier Azure backend "wakes up" from an idle state.)*
 
-![Demo GIF of Pathfinding Visualizer](demo__url_shortener.gif)
+![Demo GIF of Pathfinding Visualizer](demo_url_shortener.gif)
 
 ---
 
