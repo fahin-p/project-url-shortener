@@ -42,6 +42,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
+    permissions:
+      id-token: write
+      contents: read
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
@@ -69,5 +72,6 @@ jobs:
           app-name: 'url-shortener-backend' # Make sure this is your exact App Service name
           slot-name: 'Production'
           package: . # This is now correct because the downloaded artifact only contains the server code 
+
 
 
