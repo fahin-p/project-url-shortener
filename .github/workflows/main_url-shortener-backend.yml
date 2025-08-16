@@ -20,7 +20,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: '18.x' # Changed to 18.x to match your local setup, 22.x can be too new
+          node-version: '22.x' # Changed to 18.x to match your local setup, 22.x can be too new
 
       - name: npm install, build, and test
         # --- CHANGE #1: ADDED WORKING DIRECTORY ---
@@ -69,3 +69,4 @@ jobs:
           app-name: 'url-shortener-backend' # Make sure this is your exact App Service name
           slot-name: 'Production'
           package: . # This is now correct because the downloaded artifact only contains the server code 
+
